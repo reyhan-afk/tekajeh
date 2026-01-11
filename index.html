@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Kuis Paling Ganteng</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #74ebd5, #acb6e5);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      width: 350px;
+      text-align: center;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    select, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background: #ff6f61;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background: #ff3b2e;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card" id="box">
+  <h2>😎 Kuis Ganteng Kelas 😎</h2>
+  <p>Pilih siapa yang paling ganteng:</p>
+
+  <select id="nama">
+    <option>Ambon</option>
+    <option>Ambon Ganteng</option>
+    <option>Ambon Paling Ganteng</option>
+    <option>Ambon Legend</option>
+    <option>Ambon Ultimate 😎</option>
+  </select>
+
+  <button onclick="cek()">Lihat Hasil</button>
+</div>
+
+<script>
+  function cek() {
+    const nama = document.getElementById("nama").value;
+    document.getElementById("box").innerHTML = `
+      <h2>✨ Hasil Kuis ✨</h2>
+      <p>Setelah perhitungan tingkat dewa...</p>
+      <h3>${nama}</h3>
+      <p>resmi dinobatkan sebagai</p>
+      <h1>🏆 PALING GANTENG 🏆</h1>
+      <p>(Ambon coli pake oli 😄)</p>
+    `;
+  }
+</script>
+
+</body>
+</html>
